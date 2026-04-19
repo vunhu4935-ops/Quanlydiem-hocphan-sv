@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quản Lý Điểm</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <h1>📘 Quản Lý Điểm Học Phần</h1>
+
+    <div class="form">
+      <input id="tenMon" placeholder="Tên học phần" />
+      <input id="soTinChi" type="number" placeholder="Số tín chỉ" />
+      <input id="diem" type="number" placeholder="Điểm" />
+      <button onclick="addSubject()">Thêm</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Môn</th>
+          <th>Tín chỉ</th>
+          <th>Điểm</th>
+          <th>Xóa</th>
+        </tr>
+      </thead>
+      <tbody id="list"></tbody>
+    </table>
+
+    <h2 id="gpa">GPA: 0.00</h2>
+
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
